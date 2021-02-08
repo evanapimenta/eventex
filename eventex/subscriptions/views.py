@@ -13,7 +13,7 @@ def subscribe(request):
         if form.is_valid():
             body = render_to_string('subscriptions/subscription_email.txt', form.cleaned_data)
 
-            mail.send_mail('Confirmação de inscrição', body, 'contato@eventex.com.br', ['contato@eventex.com.br', form.cleaned_data['email']]
+            mail.send_mail('Confirmação de inscrição', body, 'pimentaevana17@gmail.com', ['pimentaevana17@gmail.com', form.cleaned_data['email']]
                             )
 
             messages.success(request, 'Inscrição realizada com sucesso!')
